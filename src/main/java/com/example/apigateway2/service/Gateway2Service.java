@@ -24,7 +24,7 @@ public class Gateway2Service {
     public String forwardToAuthorization(String json) {
         logger.info("Enviando JSON a Authorization: {}", json);
         
-        String authorizationServiceUrl = "http://localhost:8082/api/authorization/receiveJson";
+        String authorizationServiceUrl = "https://authorization-5j80.onrender.com/api/authorization/receiveJson";
         
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
