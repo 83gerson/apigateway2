@@ -23,7 +23,7 @@ public class Gateway2Controller {
     @PostMapping(value = "/receive", consumes = "application/json", produces = "application/json")
     public ResponseEntity<String> receive(@RequestBody String json) {
         logger.info("JSON recibido en Apigateway2: {}", json);
-        String externalServiceUrl = "http://25.8.234.28/sistema-emisor-dos//sistema-emisor-dos-gateway/api/controlador/GestionAutorizacion.php";
+        String externalServiceUrl = "https://ghostwhite-termite-821582.hostingersite.com/api/controlador/GestionAutorizacion.php";
         String response = gateway2Service.forwardToExternalService(json, externalServiceUrl);
         return ResponseEntity.ok(response);
     }
